@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Page</title>
+    <!--======= Icon from https://boxicons.com ======-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--======= Main Stylesheet ======-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--======= Google Font ======-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--======= BarbaJS and Gsap ======-->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  </head>
+  <body data-barba="wrapper" class="text-black font-open-sans">
+    <!-- loading screen -->
+    <div class="loader">
+      <div class="page-transition"></div>
+    </div>
+    <!-- code from here -->
+    <main
+      data-barba="container"
+      data-barba-namespace="home-section"
+      class="h-full flex flex-col justify-start lg:justify-between"
+    >
+      <!--======= Desktop Navigation Start ======-->
+      <header id="header" class="container mx-auto py-10 hidden md:block">
+        <div>
+          <div class="w-full lg:w-2/3 mx-auto">
+            <nav class="flex justify-between items-center mx-8 lg:mx-0">
+              <span id="logo" class="text-xl font-semibold"
+                >Naveen Kharwar</span
+              >
+              <ul class="flex items-center gap-4">
+                <li class="relative">
+                  <a class="hover:text-secondary" href="index.html">intro</a>
+                </li>
+                <li>
+                  <a class="text-secondary active" href="about.html">about</a>
+                </li>
+                <li>
+                  <a class="hover:text-secondary" href="contact.html"
+                    >contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!--======= Desktop Navigation End ======-->
+      <!--======= Mobile Navigation Start ======-->
+      <header
+        id="mobile-nav"
+        class="container mx-auto shadow-2xl block md:hidden"
+      >
+        <nav
+          class="fixed border bottom-0 left-0 z-50 w-full flex justify-center bg-white py-3"
+        >
+          <ul class="flex items-center justify-between gap-10 w-full mx-8">
+            <li class="relative">
+              <a
+                class="hover:text-secondary flex flex-col justify-center text-center"
+                href="index.html"
+                ><i class="bx bx-home-alt"></i> <span>intro</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="text-secondary active flex flex-col justify-center text-center"
+                href="about.html"
+                ><i class="bx bxs-user"></i> <span> about</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-secondary flex flex-col justify-center text-center"
+                href="contact.html"
+                ><i class="bx bxs-envelope"></i> <span>contact</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-secondary flex flex-col justify-center text-center"
+                href="contact.html"
+                ><i class="bx bxs-file-pdf"></i> <span>resume</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!--======= Mobile Navigation End ======-->
+      <div id="breadcrumb" class="container mx-auto block md:hidden">
+        <div class="w-full lg:w-2/3 mx-auto">
+          <div class="flex mx-8 lg:mx-0 mt-16 mb-6">
+            <ol
+              class="flex gap-3"
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+            >
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="https://naveenkharwar.me/">
+                  <span itemprop="name">Home</span></a
+                >
+                <meta itemprop="position" content="1" />
+              </li>
+              ›
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a
+                  itemscope
+                  itemtype="https://schema.org/WebPage"
+                  itemprop="item"
+                  itemid="https://naveenkharwar.me/about/"
+                  href="https://naveenkharwar.me/about/"
+                >
+                  <span itemprop="name">About me</span></a
+                >
+                <meta itemprop="position" content="2" />
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!--======= About Section Start ======-->
+      <div class="container mx-auto">
+        <div class="flex flex-col w-full lg:w-2/3 mx-auto">
+          <img
+            class="w-1/2 lg:w-4/12 mx-auto my-10"
+            src="../files/about-me.jpeg"
+            alt="Naveen Kharwar"
+          />
+          <div
+            id="about-section"
+            class="flex flex-row-reverse flex-wrap lg:flex-nowrap mx-8 lg:mx-0 mt-0"
+          >
+            <div>
+              <h2
+                id="about-me"
+                class="text-3xl lg:text-4xl font-normal font-section-heading -ml-8 lg:-ml-20 mt-10 lg:mt-20 mb-10"
+              >
+                <a
+                  class="text-xl lg:text-2xl text-gray-400 hover:text-gray-900"
+                  href="#about-me"
+                  ><i class="bx bx-link"></i
+                ></a>
+                About me
+              </h2>
+              <!-- section heading-->
+              <p class="pb-5 text-xl font-light">
+                <strong>👋🏽 Hola. I am Naveen Kharwar</strong>, a Frontend
+                developer based on Lucknow, India.
+              </p>
+              <p class="text-gray-700 pb-5">
+                I'm an open-source enthusiast who loves to explore the web. I
+                have contributed to WordPress by organing meetups, sharing my
+                knowledge in WordCamps, developing open-source themes,
+                translating WordPress and more.
+              </p>
+              <p class="text-gray-700 pb-5">
+                Since 2018, I have developed multiple websites using WordPress
+                and PHP, which helped me gain some amazing skills and
+                experiences.
+              </p>
+              <p class="text-gray-700 pb-5">
+                I completed my high school at Harmilap Mission School, Kanpur.
+                Kanpur is known for its history, leather industry, and
+                engineers.
+              </p>
+              <p class="text-gray-700 pb-5">
+                When I'm not helping people with WordPress, I like to watch
+                movies 🎥, read books 📖, explore Lucknow 🚶‍♂️ or
+                <a
+                  class="text-secondary border-b-[1px] border-gray-200 hover:border-black"
+                  href="https://instagram.com/heynaveeen"
+                >
+                  click pictures
+                </a>
+                📷.
+              </p>
+            </div>
+          </div>
+          <div
+            id="experience-section"
+            class="flex flex-row-reverse flex-wrap lg:flex-nowrap mx-8 lg:mx-0 mt-0 mb-10 lg:mb-20"
+          >
+            <div>
+              <h2
+                id="experience"
+                class="text-3xl lg:text-4xl font-normal font-section-heading -ml-8 lg:-ml-20 mt-10 lg:mt-20 mb-10"
+              >
+                <a
+                  class="text-xl lg:text-2xl text-gray-400 hover:text-gray-900"
+                  href="#experience-section"
+                  ><i class="bx bx-link"></i
+                ></a>
+                Experience
+              </h2>
+              <!-- section heading-->
+              <p class="text-gray-700 italic pb-4">
+                A front end web developer & more.
+              </p>
+              <h3
+                id="technical-skills"
+                class="font-section-heading text-lg font-medium mb-3"
+              >
+                <a
+                  class="text-xl lg:text-2xl text-gray-400 hover:text-gray-900"
+                  href="#technical-skills"
+                  ><i class="bx bx-dots-vertical-rounded"></i
+                ></a>
+                Technical Skills
+              </h3>
+              <!-- section heading-->
+              <ul class="text-gray-700 list-disc pb-5">
+                <li class="ml-12 my-5">
+                  <strong>Modern and solid web development</strong>: including:
+                  React, Next.js, Gatsby.js, unit test tools, ES6 features and
+                  CSS preprocessors.
+                </li>
+                <li class="ml-12 my-5">
+                  <strong>Speeding up the process with task runners</strong>:
+                  I'm experienced in creating frontend task runners to compile
+                  and build the JavaScript, run the CSS Preprocessors, run live
+                  servers, purge unwanted codes, etc.
+                </li>
+                <li class="ml-12 my-5">
+                  <strong>Open Source CMS, WordPress</strong>: I have more than
+                  three years of experience with WordPress. I have contributed
+                  to the software by providing support, translating the release,
+                  hosting meetups, developing open source themes and more.
+                </li>
+                <li class="ml-12 my-5">
+                  <strong>Version controlling, Github</strong>: I have adequate
+                  knowledge of version controlling software, Github. I can
+                  collaborate with the team by creating issues, managing
+                  branches, reviewing codes, etc.
+                </li>
+                <li class="ml-12 my-5">
+                  <strong>Others</strong>: Unix, Linux, WP CLI, Experience with
+                  Webpack, Gulp, Grunt, Laravel Mix, Docker, TailwindCSS,
+                  GatsbyJS, NextJS, and Familiarity with Node.js
+                </li>
+              </ul>
+              <h3
+                id="time-line"
+                class="font-section-heading text-lg font-medium mb-3"
+              >
+                <a
+                  class="text-xl lg:text-2xl text-gray-400 hover:text-gray-900"
+                  href="#time-line"
+                  ><i class="bx bx-dots-vertical-rounded"></i
+                ></a>
+                Work Timeline <span class="text-sm text-gray-400">04</span>
+              </h3>
+              <!-- section heading-->
+              <ul class="list-disc">
+                <li class="ml-12 mb-6">
+                  <div>
+                    <span class="text-gray-700 italic pb-4">
+                      2018 - December 2019 · 2 yrs</span
+                    >
+                    <p><strong>Freelancing</strong></p>
+                    <p class="text-gray-700">Web Developer</p>
+                  </div>
+                </li>
+                <li class="ml-12 mb-6">
+                  <div>
+                    <span class="text-gray-700 italic pb-4">
+                      Jan 2020 - Aug 2020 · 8 mos</span
+                    >
+                    <p><strong>Web Developer</strong></p>
+                    <p class="text-gray-700">
+                      LUBUS (WordPress, Laravel & React Company)
+                    </p>
+                  </div>
+                </li>
+                <li class="ml-12 mb-6">
+                  <div>
+                    <span class="text-gray-700 italic pb-4">
+                      Nov 2020 - Feb 2021 · 4 mos</span
+                    >
+                    <p><strong>Technical Support Engineer</strong></p>
+                    <p class="text-gray-700">
+                      BlogVault - WordPress BackUp & Security Redefined
+                    </p>
+                  </div>
+                </li>
+                <li class="ml-12 mb-6">
+                  <div>
+                    <span class="text-gray-700 italic pb-4">
+                      Feb 2021 - Present · 1 yr 6 mos</span
+                    >
+                    <p><strong>Technical Support Specialist</strong></p>
+                    <p class="text-gray-700">Awesome Motive, Inc</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr />
+          <div
+            id="info-cta"
+            class="flex flex-wrap lg:flex-nowrap mx-8 lg:mx-0 mt-10 md:mt-16"
+          >
+            <div>
+              <p>
+                Check out my articles, my projects and follow me on Twitter and
+                Github. Feel free to visit my Linkedin or contact me.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= About Section End ======-->
+      <footer class="container mx-auto">
+        <div class="w-full lg:w-2/3 mx-auto py-4 md:py-8 mb-14 md:mb-0">
+          <div class="mx-8 lg:mx-0">
+            <p class="text-gray-500 font-thin text-xs leading-5">
+              All rights reserved © <span id="year"></span> Naveen Kharwar -
+              Lucknow / India
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!--======= Footer End ======-->
+    </main>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
