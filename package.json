@@ -4,10 +4,7 @@
   "description": "2022 portfolio site",
   "main": "index.js",
   "scripts": {
-    "serve": "concurrently \"postcss src/tailwind.css -o public/style.css --watch\"  \"live-server ./public\"",
-    "development": "postcss src/tailwind.css -o public/style.css",
-    "production": "postcss src/tailwind.css -o public/style.css",
-    "start": "npm run serve"
+    "production": "grunt postcss && grunt uglify"
   },
   "repository": {
     "type": "git",
