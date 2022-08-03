@@ -4,7 +4,7 @@
   "description": "2022 portfolio site",
   "main": "index.js",
   "scripts": {
-    "production": "grunt postcss && grunt uglify"
+    "production": "grunt postcss && grunt uglify && grunt cwebp"
   },
   "repository": {
     "type": "git",

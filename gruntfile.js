@@ -48,5 +48,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-cwebp');
   grunt.loadNpmTasks("grunt-contrib-watch");
 
-  grunt.registerTask("default", ["watch", "uglify"]);
+  grunt.registerTask("default", ["watch", "uglify", "cwebp"]);
 };
