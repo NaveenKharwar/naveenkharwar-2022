@@ -33,8 +33,8 @@ module.exports = function (grunt) {
     },
     watch: {
       monitor: {
-        files: ["public/**/*.html", "src/css/tailwind.css", "src/js/script.js"],
-        tasks: ["postcss", "uglify"],
+        files: ["public/**/*.html", "src/css/tailwind.css", "src/js/script.js", "files/**.**"],
+        tasks: ["postcss", "uglify", "cwebp"],
         options: {
           spawn: false,
         },
