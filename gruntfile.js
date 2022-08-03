@@ -16,6 +16,21 @@ module.exports = function (grunt) {
         },
       },
     },
+    cwebp: {
+      dynamic: {
+        options: {
+          q: 50,
+        },
+        files: [
+          {
+            expand: true,
+            cwd: "files/",
+            src: ["**/*.{png,jpg,jpeg,gif}"],
+            dest: "public/images",
+          },
+        ],
+      },
+    },
     watch: {
       monitor: {
         files: ["public/**/*.html", "src/css/tailwind.css", "src/js/script.js"],
@@ -30,6 +45,7 @@ module.exports = function (grunt) {
   // Plugins
   grunt.loadNpmTasks("@lodder/grunt-postcss");
   grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.loadNpmTasks('grunt-cwebp');
   grunt.loadNpmTasks("grunt-contrib-watch");
 
   grunt.registerTask("default", ["watch", "uglify"]);
