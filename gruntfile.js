@@ -31,10 +31,17 @@ module.exports = function (grunt) {
         ],
       },
     },
+    copy: {
+      main: {
+        files: [
+          {expand: false, src: ['favicon/*'], dest: 'public/', filter: 'isFile'},
+        ],
+      },
+    },
     watch: {
       monitor: {
         files: ["public/**/*.html", "src/css/tailwind.css", "src/js/script.js", "files/**.**"],
-        tasks: ["postcss", "uglify", "cwebp"],
+        tasks: ["postcss", "uglify", "cwebp", "copy"],
         options: {
           spawn: false,
         },
@@ -47,6 +54,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks('grunt-cwebp');
   grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask("default", ["watch", "uglify", "cwebp"]);
+  grunt.registerTask("default", ["postcss", "uglify", "cwebp", "copy"]);
 };
