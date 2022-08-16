@@ -1,0 +1,6 @@
+# I got you!
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
