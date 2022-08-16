@@ -1,12 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>404</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naveen Kharwar | Page Not Found | 404</title>
+    <!--======= Meta Tags ======-->
+    <meta
+      name="title"
+      content="Contact Naveen Kharwar | WordPress Trainer, Developer & Customer Support Specialist"
+    />
+    <meta name="description" content="Checkout https://NaveenKharwar.me" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <!--======= Icon from https://boxicons.com ======-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--======= Main Stylesheet ======-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--======= Google Font ======-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--======= Favicons ======-->
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!--======= BarbaJS and Gsap ======-->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  </head>
+  <body data-barba="wrapper" class="text-black font-open-sans">
+    <!-- loading screen -->
+    <div class="loader">
+      <div class="page-transition"></div>
+    </div>
+    <!-- code from here -->
+    <main
+      data-barba="container"
+      data-barba-namespace="home-section"
+      class="h-full flex flex-col justify-start lg:justify-between"
+    >
+      <!--======= Desktop Navigation Start ======-->
+      <header id="header" class="container mx-auto py-10 hidden md:block">
+        <div>
+          <div class="w-full lg:w-2/3 mx-auto">
+            <nav class="flex justify-between items-center mx-8 lg:mx-0">
+              <span id="logo" class="text-xl font-semibold">nk</span>
+              <ul class="flex items-center gap-4">
+                <li class="relative">
+                  <a class="hover:text-secondary" href="/">intro</a>
+                </li>
+                <li>
+                  <a class="hover:text-secondary" href="/about/">about</a>
+                </li>
+                <li>
+                  <a class="hover:text-secondary" href="/contact/">contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!--======= Desktop Navigation End ======-->
+      <!--======= Mobile Navigation Start ======-->
+      <header
+        id="mobile-nav"
+        class="container mx-auto shadow-2xl block md:hidden z-50"
+      >
+        <nav
+          class="fixed border-t bottom-0 left-0 z-50 w-full flex justify-center bg-white py-3"
+        >
+          <ul class="flex items-center justify-between gap-10 w-full mx-8">
+            <li class="relative">
+              <a
+                class="hover:text-secondary flex flex-col justify-center text-center"
+                href="/"
+                ><i class="bx bx-home-alt"></i> <span>intro</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-secondary flex flex-col justify-center text-center"
+                href="/about/"
+                ><i class="bx bxs-user"></i> <span> about</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-secondary flex flex-col justify-center text-center"
+                href="/contact/"
+                ><i class="bx bxs-envelope"></i> <span>contact</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-secondary flex flex-col justify-center text-center"
+                href="files/NaveenKharwar-resume.pdf"
+                target="_blank"
+                ><i class="bx bxs-file-pdf"></i> <span>resume</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!--======= Mobile Navigation End ======-->
+      <!--======= 404 Section Start ======-->
+      <div class="container mx-auto">
+        <div class="flex flex-col w-full lg:w-2/3 mx-auto">
+          <div
+            id="contact-section"
+            class="flex flex-wrap lg:flex-nowrap mx-8 lg:mx-0 mt-0"
+          >
+            <div class="mb-10 lg:mb-20">
+              <h1
+                class="text-5xl lg:text-8xl font-normal font-section-heading mt-10 lg:mt-20 mb-10"
+              >
+                404 Error
+              </h1>
+              <p class="text-lg md:text-3xl font-medium text-gray-700 pb-4">
+                Yep! It is the <span class="bg-orange-400 px-5">Page not found</span> thing.
+              </p>
+              <img
+                class="w-full h-auto"
+                src="https://64.media.tumblr.com/tumblr_lz2ufhclZj1r4mh0bo1_r1_400.gifv"
+                alt="404"
+              />
+            </div>
+          </div>
+          <hr />
+          <div
+            id="info-cta"
+            class="flex flex-wrap lg:flex-nowrap mx-8 lg:mx-0 mt-10 md:mt-16"
+          >
+            <div>
+              <p class="leading-7">
+                Check out my
+                <a
+                  class="text-secondary border-b-[1px] border-gray-200"
+                  href="https://heynaveeen.wordpress.com/"
+                  >articles</a
+                >
+                and follow me on
+                <a
+                  href="https://twitter.com/naveenkharwar21"
+                  class="text-secondary border-b-[1px] border-gray-200"
+                  >Twitter</a
+                >
+                and
+                <a
+                  href="https://github.com/naveenkharwar"
+                  class="text-secondary border-b-[1px] border-gray-200"
+                  >Github</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= Contact Section End ======-->
+      <footer class="container mx-auto">
+        <div class="w-full lg:w-2/3 mx-auto py-4 md:py-8 mb-14 md:mb-0">
+          <div class="mx-8 lg:mx-0">
+            <p class="text-gray-500 font-thin text-xs leading-5">
+              All rights reserved © <span id="year"></span> Naveen Kharwar -
+              Lucknow / India
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!--======= Footer End ======-->
+    </main>
+    <script src="js/script.min.js"></script>
+  </body>
 </html>
