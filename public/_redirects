@@ -1,6 +1,6 @@
-# Don't be boring!
+# Don't be bore!
 
 /about/*        /about.html                         200
 /contact/*      /contact.html                       200
 /resume/*       /files/NaveenKharwar-resume.pdf     200
-
+/catch/*        /public/images/giphy.gif            302
