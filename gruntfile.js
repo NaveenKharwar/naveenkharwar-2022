@@ -34,7 +34,7 @@ module.exports = function (grunt) {
     copy: {
       main: {
         files: [
-          {expand: false, src: ['favicon/*', 'files/NaveenKharwar-resume.pdf'], dest: 'public/', filter: 'isFile'},
+          {expand: false, src: ['favicon/*', 'files/NaveenKharwar-resume.pdf', 'files/giphy.gif'], dest: 'public/', filter: 'isFile'},
         ],
       },
     },
